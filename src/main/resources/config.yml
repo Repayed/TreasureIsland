@@ -1,0 +1,53 @@
+permissions:
+  treasure-admin: "treasure.admin"
+
+messages:
+  prefix: "&c&lGame &8┃"
+  no-permission: "&6&lTreasure &e&lIsland &8┃ &cNo permission."
+  user:
+    game-started:
+      - ""
+      - "  &6&lTreasure &e&lIsland"
+      - "  &7The game has started."
+      - ""
+      - "  &6&lObjective"
+      - "  &eObtain 100 gold bars by mining gold ores and gold blocks."
+      - ""
+      - "  &e&lGood luck! :)"
+      - ""
+    unknown-command:
+  admin:
+    game-menu:
+      - ""
+      - "&6&lTreasure &e&lIsland"
+      - "&7Shows a list of all commands"
+      - ""
+      - "&8&l* &7/arena list &8- &fShows all of the available arenas."
+      - ""
+
+
+server-lobby:
+  world: "World"
+  x: 40.0
+  y: -104.0
+  z: -40.0
+  yaw: -180
+  pitch: -40
+
+arenas:
+  0:
+    name: blah
+    lobby-location:
+    england:
+    spain:
+    pirates:
+    natives:
+
+
+
+
+
+
+
+
+
