@@ -5,6 +5,11 @@ messages:
   prefix: "&c&lGame &8┃"
   no-permission: "&6&lTreasure &e&lIsland &8┃ &cNo permission."
   user:
+    server-join:
+      - ""
+      - "&r &r &r &r &r &r &r &r &r &r &r &r &r &r &r &r &r &r &r &e&lWelcome to &6&lTreasure &e&lIsland"
+      - "&r &r &r &r &r &r &r &r &r &r &r &r &r &7Home of the amazing minigame that I made."
+      - ""
     game-started:
       - ""
       - "  &6&lTreasure &e&lIsland"
@@ -35,13 +40,10 @@ server-lobby:
   pitch: -40
 
 arenas:
-  0:
-    name: blah
-    lobby-location:
-    england:
-    spain:
-    pirates:
-    natives:
+  minimum-player-amount: 2
+  maximum-player-amount: 8
+  starting-countdown: 30 # in seconds
+
 
 
 

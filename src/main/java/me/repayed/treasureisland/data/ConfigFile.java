@@ -33,12 +33,12 @@ public class ConfigFile {
 
     public String getConfigStringMessage(String path) {
         final String prefix = Chat.format(config.getString("messages.prefix"));
-        final String formattedMessage = Chat.format(config.getString(path)).replace("%prefix%", prefix);
+        final String formattedMessage = Chat.format(config.getString("."+path)).replace("%prefix%", prefix);
         return formattedMessage;
     }
 
     public List<String> getConfigStringList(String path) {
-        List<String> stringList = config.getStringList(path);
+        List<String> stringList = config.getStringList("."+path);
         stringList.forEach(Chat::format);
         return stringList;
     }

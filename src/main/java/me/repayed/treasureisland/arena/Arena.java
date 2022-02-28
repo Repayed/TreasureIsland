@@ -2,9 +2,14 @@ package me.repayed.treasureisland.arena;
 
 import me.repayed.treasureisland.player.TreasurePlayer;
 import me.repayed.treasureisland.team.Team;
+import me.repayed.treasureisland.team.TeamInfo;
 import org.bukkit.Location;;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 import java.util.Set;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Arena {
 
@@ -15,17 +20,21 @@ public class Arena {
     private String arenaName;
     private Location lobbyLocation;
 
-    private Team england;
-    private Team spain;
-    private Team pirates;
-    private Team natives;
+    private Team england = new Team(TeamInfo.ENGLAND);
+    private Team spain = new Team(TeamInfo.SPAIN);
+    private Team pirates = new Team(TeamInfo.PIRATES);
+    private Team natives = new Team(TeamInfo.NATIVES);
 
     private GameState gameState;
-    private Set<TreasurePlayer> playerSet;
+    private Set<TreasurePlayer> players;
 
     public Arena(String arenaName, Location lobbyLocation) {
         this.arenaName = arenaName;
         this.lobbyLocation = lobbyLocation;
+    }
+
+    public String getArenaName() {
+        return this.arenaName;
     }
 
     public GameState getGameState() {
@@ -53,6 +62,16 @@ public class Arena {
     }
 
     public Set<TreasurePlayer> getPlayers() {
-        return this.playerSet;
+        return this.players;
+    }
+
+    public void assignTeam(TreasurePlayer treasurePlayer, Team team) {
+        treasurePlayer.setTeam(team);
+    }
+
+    public void assignRandomTeam(TreasurePlayer treasurePlayer) {
+        List<Team> teamList = Arrays.asList(england, spain, pirates, natives);
+        Team assignedTeam = teamList.get(ThreadLocalRandom.current().nextInt(teamList.size()));
+        treasurePlayer.setTeam(assignedTeam);
     }
 }

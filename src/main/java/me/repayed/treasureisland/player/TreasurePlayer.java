@@ -23,6 +23,10 @@ public class TreasurePlayer {
         return uuid;
     }
 
+    public void setTeam(Team team) {
+        this.team = team;
+    }
+
     @Override
     public boolean equals(Object other) {
         if(other == null) return false;

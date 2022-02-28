@@ -81,7 +81,12 @@ public class ArenaHandler {
     }
 
     public void removeArena(Arena arena) {
+        if(arenaList.contains(arena)) {
+            arenaList.remove(arena);
 
+            String key = this.config.getConfigurationSection("arenas").getKeys(false).stream().filter(key1 -> config.getString(key1+".name").equalsIgnoreCase(arena.getArenaName())).findFirst().get();
+            this.config.set("arenas"+key, null);
+        }
     }
 
     public void addArena(Arena arena) {

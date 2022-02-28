@@ -10,6 +10,24 @@ public enum TeamInfo {
             new ItemStack(Material.DIAMOND_CHESTPLATE),
             new ItemStack(Material.DIAMOND_LEGGINGS),
             new ItemStack(Material.DIAMOND_BOOTS)
+    ),
+    SPAIN(
+            new ItemStack(Material.DIAMOND_HELMET),
+            new ItemStack(Material.DIAMOND_CHESTPLATE),
+            new ItemStack(Material.DIAMOND_LEGGINGS),
+            new ItemStack(Material.DIAMOND_BOOTS)
+    ),
+    PIRATES(
+            new ItemStack(Material.DIAMOND_HELMET),
+            new ItemStack(Material.DIAMOND_CHESTPLATE),
+            new ItemStack(Material.DIAMOND_LEGGINGS),
+            new ItemStack(Material.DIAMOND_BOOTS)
+    ),
+    NATIVES(
+            new ItemStack(Material.DIAMOND_HELMET),
+            new ItemStack(Material.DIAMOND_CHESTPLATE),
+            new ItemStack(Material.DIAMOND_LEGGINGS),
+            new ItemStack(Material.DIAMOND_BOOTS)
     );
 
 

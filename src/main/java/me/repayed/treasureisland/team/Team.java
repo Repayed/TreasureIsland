@@ -9,10 +9,8 @@ public class Team {
     private Location spawnLocation;
     private Location stashLocation;
 
-    public Team(TeamInfo teamInfo, Location spawnLocation, Location stashLocation) {
+    public Team(TeamInfo teamInfo) {
         this.teamInfo = teamInfo;
-        this.spawnLocation = spawnLocation;
-        this.stashLocation = stashLocation;
     }
 
     public Location getSpawnLocation() {
