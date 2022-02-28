@@ -1,7 +1,7 @@
 package me.repayed.treasureisland.command;
 
 import me.repayed.treasureisland.TreasureIsland;
-import me.repayed.treasureisland.command.subcommands.admin.ArenaListCommand;
+import me.repayed.treasureisland.command.subcommands.admin.*;
 import me.repayed.treasureisland.command.subcommands.user.JoinArenaCommand;
 import me.repayed.treasureisland.command.subcommands.user.LeaveArenaCommand;
 import me.repayed.treasureisland.data.ConfigFile;
@@ -29,6 +29,12 @@ public class CommandHandler implements CommandExecutor {
         this.subCommands.add(new JoinArenaCommand(treasureIsland));
         this.subCommands.add(new LeaveArenaCommand(treasureIsland));
         this.subCommands.add(new ArenaListCommand(treasureIsland));
+        this.subCommands.add(new CreateArenaCommand(treasureIsland));
+        this.subCommands.add(new SetLobbyCommand(treasureIsland));
+        this.subCommands.add(new SetSpawnCommand(treasureIsland));
+        this.subCommands.add(new SetStashCommand(treasureIsland));
+        this.subCommands.add(new JoinArenaCommand(treasureIsland));
+        this.subCommands.add(new LeaveArenaCommand(treasureIsland));
 
     }
 
@@ -39,7 +45,7 @@ public class CommandHandler implements CommandExecutor {
             sender.sendMessage("[TreasureIsland] Only players can access this command.");
         } else {
             Player player = (Player) sender;
-            final String adminPermission = treasureIsland.getConfig().getString("permissions.treasure-admin"); // change this to a configuration
+            final String adminPermission = treasureIsland.getConfig().getString("permissions.treasure-admin");
 
             SubCommand usedCommand = this.subCommands.stream()
                     .filter(subCommand -> subCommand.getName().equalsIgnoreCase(args[0]))
